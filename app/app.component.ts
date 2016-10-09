@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
+    moduleId: __moduleName,
     selector: 'my-app',
-    templateUrl: 'app/app.component.html'
+    templateUrl: 'app.component.html'
 })
 export class AppComponent { 
     // [] means property binding
@@ -10,7 +11,7 @@ export class AppComponent {
     title = 'My App';
     name = 'Jack';
     color = 'red';
-
+    
     clickMe(){
         this.color = 'green';
     }
