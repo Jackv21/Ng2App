@@ -5,17 +5,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import  { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
-import { LayoutComponent } from './layout/layout.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [ 
              BrowserModule, 
              FormsModule, 
-             HttpModule 
+             HttpModule,
+             RouterModule.forRoot([ 
+      { path: '', component: HomeComponent }
+    ]) 
            ],
   declarations: [ 
-                  AppComponent, 
-                  LayoutComponent 
+                  AppComponent,
+                  HomeComponent 
                 ],  
   bootstrap: [ AppComponent ]
 })
